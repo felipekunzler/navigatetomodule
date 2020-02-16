@@ -25,6 +25,11 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+    publishPlugin {
+        if (project.hasProperty("intellijPublishToken")) {
+            token(project.property("intellijPublishToken"))
+        }
+    }
 }
 tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
 }
