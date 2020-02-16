@@ -24,11 +24,4 @@ class NavigateToModelContributor(
         return navigationItems.filter { item -> item.name == name }.toTypedArray()
     }
 
-    class MyProjectViewModuleNode(project: Project, private val module: Module) :
-        ProjectViewModuleNode(project, module, null) {
-
-        override fun getName(): String = module.name
-
-    }
-
 }
