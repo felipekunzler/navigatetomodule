@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.navigatetomodule</id>
-    <name>Navigate To Module</name>
+    <name>Navigate to Module</name>
     <vendor email="felipekunzler@gmail.com" url="https://github.com/felipekunzler">Felipe Kunzler</vendor>
 
     <description>Navigate to Module plugin allows you to easily jump between module roots.</description>
@@ -10,9 +10,9 @@
 
     <actions>
         <action id="com.navigatetomodule.NavigateToModuleAction" class="com.navigatetomodule.NavigateToModuleAction"
-                text="Navigate To Module" description="Navigates to a selected module">
-            <keyboard-shortcut first-keystroke="control alt A" second-keystroke="C" keymap="$default"/>
-            <add-to-group group-id="ToolsMenu" anchor="first"/>
+                text="Navigate to Module" description="Navigates to a selected module">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl P"/>
+            <add-to-group group-id="GoToTargetEx" anchor="first"/>
         </action>
     </actions>
 </idea-plugin>
