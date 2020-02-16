@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.navigatetomodule"
-version = "1.0"
+version = "0.1"
 
 repositories {
     mavenCentral()
@@ -27,7 +27,4 @@ tasks {
     }
 }
 tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
-    changeNotes("""
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>""")
 }
