@@ -1,2 +1,2 @@
-rootProject.name = "modulenavigator"
+rootProject.name = "navigatetomodule"
 

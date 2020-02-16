@@ -1,15 +1,15 @@
 <idea-plugin>
-    <id>com.modulenavigator</id>
-    <name>Module Navigator</name>
+    <id>com.navigatetomodule</id>
+    <name>Navigate To Module</name>
     <vendor email="felipekunzler@gmail.com" url="https://github.com/felipekunzler">Felipe Kunzler</vendor>
 
-    <description>Module Navigator plugin</description>
+    <description>Navigate to Module plugin allows you to easily jump between module roots.</description>
 
     <!-- see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
     <actions>
-        <action id="com.modulenavigator.GoToModuleNavigatorAction" class="com.modulenavigator.GoToModuleNavigatorAction"
+        <action id="com.navigatetomodule.NavigateToModuleAction" class="com.navigatetomodule.NavigateToModuleAction"
                 text="Navigate To Module" description="Navigates to a selected module">
             <keyboard-shortcut first-keystroke="control alt A" second-keystroke="C" keymap="$default"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>

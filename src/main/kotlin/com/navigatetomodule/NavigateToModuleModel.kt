@@ -1,4 +1,4 @@
-package com.modulenavigator
+package com.navigatetomodule
 
 import com.intellij.ide.util.gotoByName.FilteringGotoByModel
 import com.intellij.navigation.NavigationItem
@@ -6,8 +6,8 @@ import com.intellij.openapi.fileTypes.FileType
 import com.intellij.openapi.project.DumbAware
 import com.intellij.openapi.project.Project
 
-class ModuleNavigatorModel(project: Project) :
-    FilteringGotoByModel<FileType>(project, arrayOf(ModuleNavigatorContributor())), DumbAware {
+class NavigateToModuleModel(project: Project) :
+    FilteringGotoByModel<FileType>(project, arrayOf(NavigateToModelContributor())), DumbAware {
 
     override fun willOpenEditor(): Boolean = false
 

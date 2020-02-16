@@ -3,7 +3,7 @@ plugins {
     kotlin("jvm") version "1.3.61"
 }
 
-group = "com.modulenavigator"
+group = "com.navigatetomodule"
 version = "1.0"
 
 repositories {

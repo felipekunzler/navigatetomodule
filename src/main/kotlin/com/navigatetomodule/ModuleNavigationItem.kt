@@ -1,4 +1,4 @@
-package com.modulenavigator
+package com.navigatetomodule
 
 import com.intellij.ide.FileSelectInContext
 import com.intellij.ide.SelectInManager
