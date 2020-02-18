@@ -3,7 +3,28 @@
     <name>Navigate to Module</name>
     <vendor email="felipekunzler@gmail.com" url="https://github.com/felipekunzler">Felipe Kunzler</vendor>
 
-    <description>Navigate to Module plugin allows you to easily jump between module roots.</description>
+    <description><![CDATA[
+        An IntelliJ plugin that allows one to quickly navigate between modules. Especially useful on projects with a number of deeply nested modules.
+        <br>
+        Modules can be filtered out by a given criteria, the selected module is opened and focused on the Project Tree View.
+        <br>
+        Keyboard shortcuts:
+        <ul>
+            <li>MacOS: Cmd + Shift + P</li>
+            <li>Windows/Linux: Ctrl + Shift + P</li>
+            <li>Menu Bar -> Navigate -> Navigate to Module</li>
+            <li>Shift twice -> Navigate to Module</li>
+        </ul>
+        Shortcuts may be changed via Preferences -> Keymap -> Navigate to Module -> Add keyboard shortcut
+    ]]>
+    </description>
+
+    <change-notes><![CDATA[
+        <ul>
+            <li>First release.</li>
+        </ul>
+    ]]>
+    </change-notes>
 
     <!-- see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
