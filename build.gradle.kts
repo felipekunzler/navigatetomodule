@@ -1,35 +1,35 @@
 plugins {
-    id("org.jetbrains.intellij") version "0.4.16"
-    kotlin("jvm") version "1.3.61"
+    id("org.jetbrains.intellij") version "1.17.2"
+    kotlin("jvm") version "1.9.22"
 }
 
 group = "com.navigatetomodule"
-version = "0.1"
+version = "0.2-dev"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("stdlib"))
 }
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = "2019.3.3"
+    version.set("2023.3")
+    type.set("IC")
 }
+
 tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = "17"
     }
-    compileTestKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+
+    withType<JavaCompile> {
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
-    publishPlugin {
-        if (project.hasProperty("intellijPublishToken")) {
-            token(project.property("intellijPublishToken"))
-        }
+
+    patchPluginXml {
+        sinceBuild.set("233")
     }
-}
-tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
 }

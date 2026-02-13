@@ -36,4 +36,7 @@
             <add-to-group group-id="GoToTargetEx" anchor="first"/>
         </action>
     </actions>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.navigatetomodule.RecentModulesService"/>
+    </extensions>
 </idea-plugin>

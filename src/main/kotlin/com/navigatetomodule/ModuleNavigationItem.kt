@@ -11,9 +11,13 @@ import javax.swing.Icon
 class ModuleNavigationItem(private val module: Module) : NavigationItem {
 
     override fun navigate(requestFocus: Boolean) {
-        val virtualFile = ModuleRootManager.getInstance(module).contentRoots[0]
-        val context = FileSelectInContext(module.project, virtualFile)
-        SelectInManager.findSelectInTarget(SelectInManager.PROJECT, module.project).selectIn(context, true)
+        val roots = ModuleRootManager.getInstance(module).contentRoots
+        val root = roots.firstOrNull() ?: return
+
+        val context = FileSelectInContext(module.project, root)
+
+        SelectInManager.findSelectInTarget(SelectInManager.getProject(), module.project)
+            ?.selectIn(context, requestFocus)
     }
 
     override fun getPresentation(): ItemPresentation? = RequestMappingItemPresentation()
@@ -33,4 +37,7 @@ class ModuleNavigationItem(private val module: Module) : NavigationItem {
         override fun getIcon(b: Boolean): Icon? = null
     }
 
+    override fun toString(): String {
+        return name
+    }
 }
