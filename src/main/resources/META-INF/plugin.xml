@@ -19,13 +19,6 @@
     ]]>
     </description>
 
-    <change-notes><![CDATA[
-        <ul>
-            <li>First release.</li>
-        </ul>
-    ]]>
-    </change-notes>
-
     <!-- see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 

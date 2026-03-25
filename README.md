@@ -13,3 +13,8 @@ Modules can be filtered out by a given criteria, the selected module is opened a
 * `Shift` twice -> `Navigate to Module`
 
 Shortcuts may be changed via `Preferences` -> `Keymap` -> `Navigate to Module` -> `Add keyboard shortcut`
+
+### Development
+* Java 21 required
+* Building: `./gradlew build`
+* Running: `./gradlew runIde` will start a new instance of IntelliJ with the plugin installed
