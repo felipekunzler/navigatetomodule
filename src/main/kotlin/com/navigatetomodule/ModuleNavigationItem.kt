@@ -13,7 +13,7 @@ class ModuleNavigationItem(private val module: Module) : NavigationItem {
     override fun navigate(requestFocus: Boolean) {
         val virtualFile = ModuleRootManager.getInstance(module).contentRoots[0]
         val context = FileSelectInContext(module.project, virtualFile)
-        SelectInManager.findSelectInTarget(SelectInManager.PROJECT, module.project).selectIn(context, true)
+        SelectInManager.findSelectInTarget(SelectInManager.getProject(), module.project).selectIn(context, true)
     }
 
     override fun getPresentation(): ItemPresentation? = RequestMappingItemPresentation()

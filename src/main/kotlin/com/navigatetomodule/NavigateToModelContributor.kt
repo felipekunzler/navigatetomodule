@@ -1,8 +1,6 @@
 package com.navigatetomodule
 
-import com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode
 import com.intellij.navigation.ChooseByNameContributor
-import com.intellij.openapi.module.Module
 import com.intellij.openapi.module.ModuleManager
 import com.intellij.openapi.project.Project
 

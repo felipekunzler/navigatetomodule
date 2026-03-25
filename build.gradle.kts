@@ -35,11 +35,6 @@ tasks {
         sourceCompatibility = "21"
         targetCompatibility = "21"
     }
-    publishPlugin {
-        if (project.hasProperty("intellijPublishToken")) {
-            token(project.property("intellijPublishToken"))
-        }
-    }
 }
 
 kotlin {
